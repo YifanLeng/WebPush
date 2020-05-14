@@ -1,0 +1,35 @@
+<nav class="navbar bg-light">
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <% if current_user != nil %>
+      <li class="nav-item" style="display: flex">
+        <img src="/home.svg" height="30" width="30"
+        style="margin-top: 5px;">
+        <a class="nav-link" href=<%="/user/#{current_user.id}"%>
+        style="font-size:20px; margin-left: 10px; color: black">Home</a>
+      </li>
+    <% end %>
+    <li class="nav-item" style="display: flex">
+      <img src="/hashtag.svg" height="30" width="30"
+      style="margin-top: 5px;">
+      <a class="nav-link" href="/explore"
+      style="font-size:20px; margin-left: 10px; color: black">Explore</a>
+    </li>
+    <li class="nav-item" style="display: flex">
+      <img src="/search.svg" height="30" width="30"
+      style="margin-top: 5px;">
+      <a class="nav-link" href="/search"
+      style="font-size:20px; margin-left: 10px; color: black">Search</a>
+    </li>
+    <% if current_user != nil %>
+      <li class="nav-item" style="display: flex">
+        <img src="/arrow-alt-circle-right.svg" height="30" width="30"
+        style="margin-top: 5px;">
+        <a class="nav-link" href="/logout"
+        style="font-size:20px; margin-left: 10px; color: black">Log Out</a>
+      </li>
+    <% end %>
+  </ul>
+
+</nav>
